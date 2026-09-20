@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat_posting</title>
+    <link rel="stylesheet" href="../css_files/seat_posting.css">
+</head>
+
+<body>
+
+    <div class="form-card">
+        <h1 class="form-title">Post a Seat</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="title">Listing Title <span class="required">*</span></label>
+                <input type="text" id="title" placeholder="e.g. Single Seat in Clean Mess">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="city">City <span class="required">*</span></label>
+                    <input type="text" id="city" placeholder="Dhaka">
+                </div>
+                <div class="form-group">
+                    <label for="area">Area <span class="required">*</span></label>
+                    <input type="text" id="area" placeholder="Mirpur 10">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="rent">Monthly Rent (৳) <span class="required">*</span></label>
+                    <input type="number" id="rent" placeholder="3500">
+                </div>
+                <div class="form-group">
+                    <label for="seat-type">Seat Type</label>
+                    <select id="seat-type">
+                        <option>Single</option>
+                        <option>Shared (2)</option>
+                        <option>Shared (3+)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row-4">
+                <div class="form-group">
+                    <label for="food">Food</label>
+                    <select id="food">
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bathroom">Bathroom</label>
+                    <select id="bathroom">
+                        <option>Shared</option>
+                        <option>Attached</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="internet">Internet</label>
+                    <select id="internet">
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="electricity">Electricity</label>
+                    <select id="electricity">
+                        <option>Included</option>
+                        <option>Extra</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="available-from">Available From</label>
+                <input type="date" id="available-from">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description"
+                    placeholder="Describe the mess, neighborhood, nearby facilities..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Photos (optional)
+                    <div class="upload-box">
+                        <div class="upload-icon">🖼️</div>
+                        <div class="upload-text">Click to upload photos (max 5 images)</div>
+                        <div class="upload-hint">JPG, PNG — max 2MB each</div>
+                        <input type="file" name="photo" id="photo" accept="image/png, image/jpeg" multiple
+                            style="display:none;">
+                    </div>
+                </label>
+
+            </div>
+
+            <button type="submit" class="submit-btn">Post Listing</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
