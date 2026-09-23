@@ -1,3 +1,24 @@
+<?php
+    session_start();
+    include "db_connect.php";
+
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.html");
+        exit();
+    }
+
+    $user_id = $_SESSION['user_id'];
+    $sql = "SELECT * FROM users WHERE id = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $user_id);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $user = mysqli_fetch_assoc($result);
+
+    $firstLetter = strtoupper(substr($user['full_name'], 0, 1));
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,9 +55,11 @@
         </nav>
 
         <div class="sidebar-footer">
-            <div class="footer-name">admin@messfinder.bd</div>
-            <div class="footer-role">Administrator</div>
-            <a href="#" class="logout-link">⏻ Logout</a>
+            <div class="footer-name">
+                <?php echo htmlspecialchars($user['full_name']); ?>
+            </div>
+            <div class="footer-role">user</div>
+            <a href="/PUC_project_git/Mess_Finder_Project/php_files/logout.php" class="logout-link">⏻ Logout</a>
         </div>
     </aside>
     <!-- knjbcjvvjmbv    class="content-section active-section" id="Dashboard-section" -->
@@ -53,31 +76,45 @@
 
             <div class="profile-card">
                 <div class="profile-header">
-                    <div class="avatar-square">T</div>
+                    <div class="avatar-square">
+                        <?php echo $firstLetter; ?>
+                    </div>
                     <div>
-                        <div class="profile-name">Tea-bro</div>
-                        <div class="profile-university">puc</div>
+                        <div class="profile-name">
+                            <?php echo htmlspecialchars($user['full_name']); ?>
+                        </div>
+                        <div class="profile-university">
+                           <?php echo htmlspecialchars($user['university']); ?>
+                        </div>
                     </div>
                 </div>
 
                 <div class="info-row">
                     <div class="info-label">Email</div>
-                    <div class="info-value">bro@htmail.com</div>
+                    <div class="info-value"> 
+                        <?php echo htmlspecialchars($user['email']); ?>
+                    </div>
                 </div>
 
                 <div class="info-row">
                     <div class="info-label">Phone</div>
-                    <div class="info-value">01712-999888</div>
+                    <div class="info-value"> 
+                        <?php echo htmlspecialchars($user['phone']); ?>
+                    </div>
                 </div>
 
                 <div class="info-row">
                     <div class="info-label">University</div>
-                    <div class="info-value">puc</div>
+                    <div class="info-value"> 
+                        <?php echo htmlspecialchars($user['university']); ?>
+                    </div>
                 </div>
 
                 <div class="info-row">
                     <div class="info-label">City</div>
-                    <div class="info-value">chg</div>
+                    <div class="info-value">
+                        <?php echo htmlspecialchars($user['city']); ?>
+                    </div>
                 </div>
 
                 <a href="#" class="edit-btn">Edit Profile</a>
