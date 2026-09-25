@@ -32,7 +32,7 @@ session_start();
 
         <div class="nav-links">
             <a href="#" class="active">Home</a>
-            <a href="#">Find a Seat</a>
+            <a href="/PUC_project_git/Mess_Finder_Project/php_files/seat.php">Find a Seat</a>
         </div>
 
         <!-- Logged-IN view — hidden by default -->
@@ -55,9 +55,7 @@ session_start();
                 </a>
 
                 <a href="profile.php" class="avatar-circle">
-                    <i class="fa-solid fa-user" >
-                        🦸
-                    </i>
+                    <i class="fa-solid fa-user" >🦸</i>
                 </a>
 
             </div>

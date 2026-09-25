@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if (mysqli_query($conn, $sql)) {
          echo "<script>
                 alert('Registration successful! Welcome, $full_Name.');
-                window.location.href = '/PUC_project_git/Mess_Finder_Project/html_files/index.html';
+                window.location.href = '/PUC_project_git/Mess_Finder_Project/php_files/index.php';
             </script>";
     } else {
         echo "Error: " . mysqli_error($conn);

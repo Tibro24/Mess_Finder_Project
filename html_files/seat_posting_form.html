@@ -13,31 +13,31 @@
     <div class="form-card">
         <h1 class="form-title">Post a Seat</h1>
 
-        <form>
+        <form action="/PUC_project_git/Mess_Finder_Project/php_files/seat_posting.php"  method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="title">Listing Title <span class="required">*</span></label>
-                <input type="text" id="title" placeholder="e.g. Single Seat in Clean Mess">
+                <input type="text" id="title" placeholder="e.g. Single Seat in Clean Mess" name="title" required>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="city">City <span class="required">*</span></label>
-                    <input type="text" id="city" placeholder="Dhaka">
+                    <input type="text" id="city" placeholder="Dhaka" name="city" required>
                 </div>
                 <div class="form-group">
                     <label for="area">Area <span class="required">*</span></label>
-                    <input type="text" id="area" placeholder="Mirpur 10">
+                    <input type="text" id="area" placeholder="Mirpur 10" name="area" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="rent">Monthly Rent (৳) <span class="required">*</span></label>
-                    <input type="number" id="rent" placeholder="3500">
+                    <input type="number" id="rent" placeholder="3500" name="monthly_rent" required>
                 </div>
                 <div class="form-group">
                     <label for="seat-type">Seat Type</label>
-                    <select id="seat-type">
+                    <select id="seat-type" required name="seat_type">
                         <option>Single</option>
                         <option>Shared (2)</option>
                         <option>Shared (3+)</option>
@@ -48,28 +48,28 @@
             <div class="form-row-4">
                 <div class="form-group">
                     <label for="food">Food</label>
-                    <select id="food">
+                    <select id="food" name="food" required>
                         <option>No</option>
                         <option>Yes</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="bathroom">Bathroom</label>
-                    <select id="bathroom">
+                    <select id="bathroom" name="bathroom" required>
                         <option>Shared</option>
                         <option>Attached</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="internet">Internet</label>
-                    <select id="internet">
+                    <select id="internet" name="internet" required>
                         <option>No</option>
                         <option>Yes</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="electricity">Electricity</label>
-                    <select id="electricity">
+                    <select id="electricity" name="electricity" required>
                         <option>Included</option>
                         <option>Extra</option>
                     </select>
@@ -78,13 +78,12 @@
 
             <div class="form-group">
                 <label for="available-from">Available From</label>
-                <input type="date" id="available-from">
+                <input type="date" id="available-from" name="available_from" required>
             </div>
 
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea id="description"
-                    placeholder="Describe the mess, neighborhood, nearby facilities..."></textarea>
+                <textarea id="description" placeholder="Describe the mess, neighborhood, nearby facilities..." name="description "></textarea>
             </div>
 
             <div class="form-group">
