@@ -176,8 +176,6 @@ button.search:active {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin-left: 50px;
-
 }
 
 .seat-card {
