@@ -176,6 +176,8 @@ button.search:active {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    /* margin-left: 50px; */
+
 }
 
 .seat-card {
@@ -287,15 +289,18 @@ button.search:active {
 @media (max-width: 1024px) {
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
+        margin-left: 0px;
     }
+     
 }
 
 @media (max-width: 640px) {
     body {
         padding: 20px 16px;
     }
-
+     
     .cards-grid {
         grid-template-columns: 1fr;
+        margin-left: 0px;
     }
 }

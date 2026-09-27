@@ -95,7 +95,7 @@ $totalSeats = mysqli_num_rows($result);
     <div class="results" id="results"></div>
 
     <section  >
-        <p class="results-count" style="margin-bottom: 30px;">
+        <p class="results-count m50">
             <?php echo $totalSeats; ?> seats found
         </p>
 
