@@ -15,12 +15,17 @@ if (isset($_POST['login'])) {
     $result = mysqli_stmt_get_result($stmt);
     $user = mysqli_fetch_assoc($result);
 
-    if ($user && password_verify($password, $user['password'])) {
+    if ($user && $password === $user['password']) {
 
         $_SESSION['user_id'] = $user['id'];
-        header("Location: index.php");
-        exit();
+        $_SESSION['role'] = $user['role'];
 
+        if($user['role'] === 'admin'){
+            header("Location: admin.php");
+        } else{
+            header("Location: index.php");
+        }
+        exit();
     } else {
         echo "Wrong username or password.";
     }

@@ -8,7 +8,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $phone = $_POST['phone'];
     $university = $_POST['university'];
     $city = $_POST['city'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    // $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
 
     $sql =  "INSERT INTO `users` (`full_name`, `email`, `phone`, `university`, `city`, `password`, `created_at`) 
     VALUES ('$full_name', '$email', '$phone', '$university', '$city', '$password', current_timestamp())";

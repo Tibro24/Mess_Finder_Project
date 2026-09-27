@@ -5,7 +5,7 @@ include 'db_connect.php';
 $listingId = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
 // Join with users so we can show "Posted by" — matches user_id -> users.id
-$sql = "SELECT listings.*, users.full_name AS owner_name 
+$sql = "SELECT listings.*, users.full_name AS owner_name, users.phone AS owner_phone
         FROM listings 
         JOIN users ON listings.user_id = users.id 
         WHERE listings.id = ?";
@@ -29,7 +29,7 @@ $typeLabels = [
 ];
 $badgeLabel = $typeLabels[$listing['seat_type']] ?? $listing['seat_type'];
 
-$photo = !empty($listing['photo']) ? '/PUC_project_git/Mess_Finder_Project/mess_photo/' . $listing['photo'] : 'https://picsum.photos/seed/' . $listing['id'] . '/800/500';
+$photo = !empty($listing['photo']) ? '/PUC_project_git/Mess_Finder_Project/mess_photos/' . $listing['photo'] : 'https://picsum.photos/seed/' . $listing['id'] . '/800/500';
 
 $availableFrom = !empty($listing['available_from']) ? $listing['available_from'] : 'Not specified';
 ?>
@@ -102,11 +102,23 @@ $availableFrom = !empty($listing['available_from']) ? $listing['available_from']
       </div>
       <div class="action-buttons">
         <button class="save-btn">🤍 Save</button>
-        <a href="#" class="contact-btn">Contact</a>
+            <button class="contact-btn" data-phone="<?php echo htmlspecialchars($listing['owner_phone']); ?>" onclick="showPhone(this)">
+              Contact
+            </button>
       </div>
     </div>
   </div>
 </div>
+       <!-- number showing script. -->
+      <script>
+        function showPhone(button) {
+          if (button.textContent.trim() === "Contact") {
+            button.textContent = button.dataset.phone;
+          } else {
+            button.textContent = "Contact";
+          }
+        }
+      </script>
 
 </body>
 </html>

@@ -61,16 +61,16 @@ $totalSeats = mysqli_num_rows($result);
 
     <h1>Find a Seat</h1>
 
-    <div class="card">
+    <div class="card" style="padding: 20px;">
         <div class="fields">
             <div class="field">
                 <label for="area">Area</label>
                 <select id="area">
                     <option value="">All Areas</option>
-                    <option value="mirpur">Mirpur</option>
-                    <option value="dhanmondi">Dhanmondi</option>
-                    <option value="uttara">Uttara</option>
-                    <option value="mohammadpur">Mohammadpur</option>
+                    <option value="mirpur">Agrabad</option>
+                    <option value="dhanmondi">GEC</option>
+                    <option value="uttara">Cinema palace</option>
+                    <option value="mohammadpur">Chawkbazar</option>
                     <option value="badda">Badda</option>
                 </select>
             </div>
@@ -94,7 +94,7 @@ $totalSeats = mysqli_num_rows($result);
 
     <div class="results" id="results"></div>
 
-    <section>
+    <section  >
         <p class="results-count" style="margin-bottom: 30px;">
             <?php echo $totalSeats; ?> seats found
         </p>
