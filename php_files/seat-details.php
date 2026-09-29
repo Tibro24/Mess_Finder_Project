@@ -101,6 +101,10 @@ $availableFrom = !empty($listing['available_from']) ? $listing['available_from']
         <div class="posted-by-name"><?php echo htmlspecialchars($listing['owner_name']); ?></div>
       </div>
       <div class="action-buttons">
+      <a href="/PUC_project_git/Mess_Finder_Project/html_files/report.html">
+        <button class="save-btn" style="color:#f01f0c;color:#f01f0c;padding-left: 6px;padding-right: 6px;padding-top: 6px;padding-bottom: 6px;margin-bottom: 10px;margin-top: 10px;">Report</button>
+      </a>
+        
         <button class="save-btn">🤍 Save</button>
             <button class="contact-btn" data-phone="<?php echo htmlspecialchars($listing['owner_phone']); ?>" onclick="showPhone(this)">
               Contact
