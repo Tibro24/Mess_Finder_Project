@@ -443,6 +443,10 @@
   .delete-link:hover {
       text-decoration: underline;
   }
+  
+
+
+   
 
   /* ---------- Responsive breakpoints ---------- */
 
@@ -482,3 +486,7 @@
       display: block;
       animation: fadeIn 0.3s ease;
   }
+
+  /*report section style----------------*/
+
+   

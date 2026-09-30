@@ -169,46 +169,46 @@ session_start();
         <section class="P_area">
             <div class="area-grid">
                 <div class="area-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6tBMEl1oKZ7ikGv02LDf1TWTTSYA40MNGt8qN7AAEfOEpelAKLZGRMOc&s=10"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5erweRgwNy3OMLr5wzWefvZapQApiGAhkb2nAFrpCbQ&s=10"
                         alt="chobi nai">
                     <div class="area-info">
-                        <div class="area-name">Fufuri nagar</div>
+                        <div class="area-name">jamal khan</div>
                         <div class="area-seats">25 seats</div>
                     </div>
                 </div>
                 <div class="area-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKHmFmUUffvO0LSfVZgHs4Gqb5-6ZMKyouMxBM7cPe4hRq0ytmlrl3Kk&s=10"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgEp1aSO41i6mUGwQyOwqniO5jJoIEFUbONOYG_Z0Q0LaT_-8F7J4BWgY&s=10"
                         alt="chobi nai">
 
                     <div class="area-info">
-                        <div class="area-name">Dholak pur</div>
+                        <div class="area-name">Port Colony</div>
                         <div class="area-seats">15 seats</div>
                     </div>
                 </div>
                 <div class="area-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMkFc-yXbzj6uxlzY7Suz8RpN2_4jZDlZcQzf9fAC6r4aWBT_p22WFIc&s=10"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwOVipHXl1js70u25Fa9H1HS9gDRTDAj-Vv1eRE_O6-Q5ru0wC2VAPOEc&s=10"
                         alt="chobi nai">
 
                     <div class="area-info">
-                        <div class="area-name">krisnonagr</div>
+                        <div class="area-name">chowmuhani</div>
                         <div class="area-seats">45 seats</div>
                     </div>
                 </div>
                 <div class="area-card">
-                    <img src="https://trippainter.com/wp-content/uploads/2020/10/alir-guha-1024x576.jpg"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1GXH8cfGgw-7l8vXN_JFk2BoVXX3NwMjigC84gvdD1sB601HuTAZ-RzA&s=10"
                         alt="chobi nai">
 
                     <div class="area-info">
-                        <div class="area-name">ali babar guha</div>
+                        <div class="area-name">DC hill area</div>
                         <div class="area-seats">29 seats</div>
                     </div>
                 </div>
                 <div class="area-card">
-                    <img src="https://www.orfonline.org/public/uploads/posts/image/1776090651_img-north-korea.jpg"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MdFsiSI7hP2SbhS7NNzSCLO2Rh2Mdq_nXspN-zid5STZHIb6oz7V772v&s=10"
                         alt="chobi nai">
                     <div class="area-info">
-                        <div class="area-name">north korea</div>
-                        <div class="area-seats">25 seats</div>
+                        <div class="area-name">Hemsen Lane</div>
+                        <div class="area-seats">10 seats</div>
                     </div>
                 </div>
 

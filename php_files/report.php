@@ -1,3 +1,6 @@
+<?php
+$listingId = isset($_GET['listing_id']) ? (int) $_GET['listing_id'] : 0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +18,7 @@
     <p class="form-subtitle">Let us know what's wrong — we'll review it shortly.</p>
 
     <form action="/PUC_project_git/Mess_Finder_Project/php_files/submit-report.php" method="post">
-      <input type="hidden" name="listing_id" value="">
+      <input type="hidden" name="listing_id" value="<?php echo $listingId; ?>">
 
       <div class="form-group">
         <label for="reason">Reason</label>

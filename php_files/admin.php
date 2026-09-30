@@ -28,6 +28,17 @@ $allListings = mysqli_query($conn, "
 $listingCount = mysqli_num_rows($allListings);
 
 $allUsers = mysqli_query($conn, "SELECT * FROM users ORDER BY created_at DESC");
+
+
+
+$sql = "SELECT reports.*, listings.title AS listing_title, users.full_name AS reporter_name
+        FROM reports
+        JOIN listings ON reports.listing_id = listings.id
+        JOIN users ON reports.reporter_id = users.id
+        ORDER BY reports.created_at DESC";
+
+$result = mysqli_query($conn, $sql);
+$totalReports = mysqli_num_rows($result);
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +49,7 @@ $allUsers = mysqli_query($conn, "SELECT * FROM users ORDER BY created_at DESC");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin_panal</title>
     <link rel="stylesheet" href="../css_files/admin_panal.css">
+    <link rel="stylesheet" href="../css_files/admin_er_report.css">
 </head>
 
 <body>
@@ -61,7 +73,7 @@ $allUsers = mysqli_query($conn, "SELECT * FROM users ORDER BY created_at DESC");
             <a href="#" class="nav-item active" onclick="showSection('Dashboard')">🏠 Dashboard</a>
             <a href="#" class="nav-item" onclick="showSection('Users')">👤 Users</a>
             <a href="#" class="nav-item" onclick="showSection('Listings')">🏢 Listings</a>
-            <a href="#" class="nav-item">🚩 Reports</a>
+            <a href="#" class="nav-item" onclick="showSection('reports')">🚩 Reports</a>
         </nav>
 
         <div class="sidebar-footer">
@@ -229,61 +241,30 @@ $allUsers = mysqli_query($conn, "SELECT * FROM users ORDER BY created_at DESC");
             </div>
 
         </div>
+
+        <!-- 😍report section starts here..😍 -->
+        <div class="content-section active-section" id="reports-section">
+            <h1 class="page-title">Manage Reports</h1>
+            <p class="page-subtitle"> <?php echo $totalReports; ?> Reports in database</p>
+            <?php while ($report = mysqli_fetch_assoc($result)): ?>
+                <div class="report-card" style="margin-bottom: 15px;">
+                    <div class="report-header">
+                        <span class="report-id"># <?php echo $report['id']; ?></span>
+                        <button class="btn-delete">Delete</button>
+                    </div>
+                    <h3 class="report-title"><?php echo htmlspecialchars($report['reason']); ?></h3>
+                    <p class="report-meta">
+                        Reported by <strong><?php echo htmlspecialchars($report['reporter_name']); ?></strong>
+                        · Listing: <?php echo htmlspecialchars($report['listing_title']); ?>
+                        · <?php echo date('d M Y', strtotime($report['created_at'])); ?>
+                    </p>
+                    <p class="report-desc"><?php echo htmlspecialchars($report['description']); ?></p>
+                </div>
+            <?php endwhile; ?>
+        </div>
     </main>
 
-    <!-- <section id="dashboard-section" class="content-section active-section">
-        <h1 class="page-title">Manage Users</h1>
-        <p class="page-subtitle">2 registered accounts</p>
-
-        <div class="card">
-            <div class="search-bar">
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search users...">
-                </div>
-            </div>
-
-            <div class="table-scroll">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>University</th>
-                            <th>Location</th>
-                            <th>Role</th>
-                            <th>Joined</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="id">1</td>
-                            <td class="name">Rahim Ahmed</td>
-                            <td class="email">rahim@abc.edu.bd</td>
-                            <td class="university">BUET</td>
-                            <td>Mirpur</td>
-                            <td><span class="role-badge role-user">USER</span></td>
-                            <td>15 Jan 2024</td>
-                            <td><a href="#" class="delete-link">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td class="id">2</td>
-                            <td class="name">Karim Hossain</td>
-                            <td class="email">karim@xyz.edu.bd</td>
-                            <td class="university">DU</td>
-                            <td>Uttara</td>
-                            <td><span class="role-badge role-user">USER</span></td>
-                            <td>08 Feb 2024</td>
-                            <td><a href="#" class="delete-link">Delete</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-    </section> -->
+     
     <script src="../js_files/admin.js"></script>
 </body>
 </html>
