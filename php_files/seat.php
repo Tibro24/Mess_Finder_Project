@@ -101,12 +101,11 @@ $totalSeats = mysqli_num_rows($result);
 
         <?php if ($totalSeats > 0): ?>
 
-            <div class="cards-grid">
+            <div class="cards-grid" >
 
                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
 
                     <?php
-                    // Map the DB's seat_type value to the short badge label shown on the card
                     $typeLabels = [
                         'Single'     => 'Single',
                         'Shared (2)' => 'Double',

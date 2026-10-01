@@ -9,16 +9,21 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../css_files/home.css">
+    <link rel="stylesheet" href="/PUC_project_git/Mess_Finder_Project/css_files/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="brand">
-            <div class="logo-icon">M</div>
+            <div class="logo-icon">
+                <i class="ti ti-home-search" aria-hidden="true"></i>
+            </div>
             <div class="brand-name">MessFinder<span>BD</span></div>
         </div>
 
@@ -55,7 +60,7 @@ session_start();
                 </a>
 
                 <a href="profile.php" class="avatar-circle">
-                    <i class="fa-solid fa-user" >🦸</i>
+                    <i class="fa-solid fa-user" ></i>
                 </a>
 
             </div>
@@ -226,6 +231,44 @@ session_start();
             <a href="/PUC_project_git/Mess_Finder_Project/html_files/seat_posting_form.html" class="cta-btn">Post a Seat — Free</a>
         </section>
     </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div style="margin-top: 15px;">
+                <h3 class="footer-logo">
+                    <i class="ti ti-home-search" style="color:#4ade80;margin-right:6px;" aria-hidden="true"></i>
+                    MessFinder <span>BD</span></h3>
+                <p>Find and post mess and hostel seats across Bangladesh.</p>
+            </div>
+            <div>
+                <h4>Quick links</h4>
+                <a href="#">Find a seat</a>
+                <a href="#">post a seat</a>
+                <a href="#">Login</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>tibroshill020@gmail.com</p>
+                <div class="contacts-icons">
+                    <a href="">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">&copy;
+            MessFinderBD. All rights reserved.
+        </div>
+    </footer>
     <script src="/js_files/index.js"></script>
 </body>
 

@@ -188,7 +188,7 @@ button.search:active {
     background: #fff;
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 4px rgb(0 0 0 / 59%);
 }
 
 .seat-img-wrap {
